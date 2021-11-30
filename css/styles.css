@@ -17,6 +17,7 @@
   --full-black: #000000;
   --color-footer-links: rgba(255, 255, 255, 0.6);
   --background-ourteam-button: #f5f4fa;
+  --color-padding-bottom: #ececec;
 }
 
 body {
@@ -26,16 +27,73 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+/* Утиилиты */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+body,
+main,
+section {
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  /*   outline: 2px solid tomato;
+  background-color: rgba(136, 193, 211, 0.671); */
+}
 
 /* Header + footer */
 header {
   background-color: var(--primary-white-color);
+  border-bottom: 1px solid var(--color-padding-bottom);
 }
 footer {
   background-color: var(--secondary-background-color);
 }
 .list {
   list-style: none;
+}
+
+/* main nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: inherit;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+
+.contacts {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
 }
 
 .nav-web {
@@ -60,10 +118,32 @@ footer {
   color: var(--primary-white-color);
 }
 
+.footer .footer-web {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
 .footer .list {
   line-height: 1.71;
   font-style: normal;
+  box-sizing: border-box;
 }
+
+.footer .list:not(:last-child) {
+  padding-bottom: 9px;
+}
+.footer .list:last-child {
+  padding-bottom: 60px;
+}
+
+/* .footer .footer-address {
+  padding-bottom: 9px;
+}
+
+.footer a:not(:last-child) {
+  padding-bottom: 9px;
+} */
 
 .footer-address {
   color: var(--primary-white-color);
@@ -81,7 +161,18 @@ footer {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: block;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
+.nav-menu .item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts .item-link:not(:last-child) {
+  margin-right: 50px;
+}
+
 .nav-menu .link:hover,
 .nav-menu .link:focus {
   color: var(--accent-color);
@@ -106,6 +197,10 @@ footer {
 .decision {
   background-color: var(--secondary-background-color);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .decision-main {
   color: var(--primary-white-color);
@@ -114,6 +209,7 @@ footer {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  padding-top: 200px;
 }
 
 /* Кнопка */
@@ -124,20 +220,35 @@ footer {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px 4px 4px 0px;
+  border-radius: 4px;
   cursor: pointer;
   border: 0;
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 200px;
 }
 
 /* Section2 - Особенности */
-.advantages {
-  text-align: Left;
+.advantages .list {
+  /* box-sizing: inherit; */
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
+/* .advantages .adv-groups {
+} */
+
 .advantages-hover {
   display: none;
 }
@@ -146,9 +257,16 @@ footer {
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
+  padding-bottom: 10px;
 }
 .advantages p {
-  line-height: 1.71px;
+  /* line-height: 1.71px; */
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  width: 270px;
+  height: 75px;
 }
 /* Section3 - Направления работы студии */
 .directions h2 {
@@ -157,6 +275,13 @@ footer {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+.directions .list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 94px;
 }
 
 /* Section4 - Наша команда */
@@ -169,6 +294,8 @@ footer {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  padding-top: 94px;
+  padding-bottom: 50px;
 }
 .team h3 {
   color: var(--title-text-color);
@@ -176,12 +303,17 @@ footer {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+
+  padding-top: 30px;
 }
 
 .team p {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .team-member {
@@ -189,6 +321,12 @@ footer {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team .list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 94px;
 }
 
 /* Section 2.1 - Направления деятельности */
