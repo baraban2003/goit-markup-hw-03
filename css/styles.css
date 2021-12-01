@@ -18,6 +18,7 @@
   --color-footer-links: rgba(255, 255, 255, 0.6);
   --background-ourteam-button: #f5f4fa;
   --color-padding-bottom: #ececec;
+  --color-border-items: #eeeeee;
 }
 
 body {
@@ -57,7 +58,7 @@ section {
   padding-left: 15px;
   padding-right: 15px;
   /*   outline: 2px solid tomato;
-  background-color: rgba(136, 193, 211, 0.671); */
+  background-color: rgba(136, 193, 211, 0.671);*/
 }
 
 /* Header + footer */
@@ -354,7 +355,22 @@ footer {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* top filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-top: 77px;
+  margin-bottom: 50px;
+}
+.button-filter {
+  padding: 6px 22px;
+}
+.filters .li-filter:not(:last-child) {
+  margin-right: 8px;
+}
+
 /* Section 2.2 - Наши направления деятельности */
+
 .activity a {
   text-decoration: none;
 }
@@ -369,4 +385,28 @@ footer {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.87;
+}
+
+/* filterd items */
+.filtered-activity {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-bottom: 111px;
+}
+.filtered-activity > .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 370px;
+  height: 404px;
+  border: 1px solid var(--color-border-items);
+}
+.filtered-activity .filter-service {
+  padding-top: 20px;
+  padding-bottom: 4px;
+}
+.filtered-activity .filter-direction {
+  padding-bottom: 20px;
 }
