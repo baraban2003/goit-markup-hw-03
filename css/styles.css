@@ -207,7 +207,6 @@ footer {
 /* section 1 / h1+button */
 .hero .decision {
   box-sizing: content-box;
-  margin-left: 200px;
   width: 1600px;
   height: 600px;
 }
