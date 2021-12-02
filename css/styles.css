@@ -200,12 +200,15 @@ footer {
 .nav-menu .current {
   color: var(--accent-color);
 }
+.hero {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 /* section 1 / h1+button */
 .hero .decision {
+  box-sizing: content-box;
   width: 1600px;
-  margin-left: -200px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  height: 600px;
 }
 .decision {
   background-color: var(--secondary-background-color);
