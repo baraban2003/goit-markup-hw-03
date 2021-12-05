@@ -69,14 +69,14 @@ header {
   background-color: var(--primary-white-color);
   border-bottom: 1px solid var(--color-padding-bottom);
   max-width: 1600px;
-  /* height: 80px; */
+
   margin-left: auto;
   margin-right: auto;
 }
 footer {
   background-color: var(--secondary-background-color);
   max-width: 1600px;
-  /* height: 252px; */
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -208,26 +208,27 @@ footer {
 .nav-menu .current {
   color: var(--accent-color);
 }
+
 .hero {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 0;
   padding-bottom: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--secondary-background-color);
 }
 /* section 1 / h1+button */
 .hero .decision {
   padding-top: 200px;
   padding-bottom: 200px;
-}
-.decision {
-  background-color: var(--secondary-background-color);
+  margin: auto;
+
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .decision-main {
   color: var(--primary-white-color);
   font-weight: 900;
