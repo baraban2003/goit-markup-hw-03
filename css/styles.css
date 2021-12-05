@@ -68,15 +68,15 @@ section {
 header {
   background-color: var(--primary-white-color);
   border-bottom: 1px solid var(--color-padding-bottom);
-  width: 1600px;
-  height: 80px;
+  max-width: 1600px;
+  /* height: 80px; */
   margin-left: auto;
   margin-right: auto;
 }
 footer {
   background-color: var(--secondary-background-color);
-  width: 1600px;
-  height: 252px;
+  max-width: 1600px;
+  /* height: 252px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -209,17 +209,26 @@ footer {
   color: var(--accent-color);
 }
 .hero {
-  padding: 0;
-  margin: 0;
+  /*   padding: 0;
+  margin: 0; */
+  /*  width: 1600px; */
+  max-width: 1600px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 /* section 1 / h1+button */
 .hero .decision {
-  box-sizing: content-box;
-  width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
+  /* box-sizing: content-box; */
+  /* width: 1600px;
+  height: 600px; */
+  /*   margin-left: auto;
+  margin-right: auto; */
+  /* padding: 0; */
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .decision {
   background-color: var(--secondary-background-color);
@@ -313,8 +322,8 @@ footer {
 .team {
   background-color: var(--background-ourteam-button);
   box-sizing: border-box;
-  width: 1600px;
-  height: 648px;
+  max-width: 1600px;
+  /* height: 648px; */
   margin-left: auto;
   margin-right: auto;
 }
